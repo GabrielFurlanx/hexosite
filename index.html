@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>Ordenação e Busca Binária</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Ordenação e Busca Binária">
 <meta property="og:url" content="https://gabrielfurlanx.github.io/hexosite/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="Ordenação e Busca Binária">
+<meta property="og:locale" content="pt_BR">
+<meta property="article:author" content="Gabriel Furlan Costa">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/hexosite/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/hexosite/atom.xml" title="Ordenação e Busca Binária" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/hexosite/favicon.png">
@@ -39,7 +39,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/hexosite/" id="logo">Hexo</a>
+        <a href="/hexosite/" id="logo">Ordenação e Busca Binária</a>
       </h1>
       
     </div>
@@ -57,10 +57,10 @@
         
           <a class="nav-icon" href="/hexosite/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
         
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gabrielfurlanx.github.io/hexosite"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gabrielfurlanx.github.io/hexosite"></form>
       </div>
     </div>
   </div>
@@ -69,10 +69,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Head" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/hexosite/2024/05/14/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-05-14T19:05:59.404Z" itemprop="datePublished">2024-05-14</time>
+    <a href="/hexosite/2024/05/14/Head/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:17:37.000Z" itemprop="datePublished">2024-05-14</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/hexosite/2024/05/14/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/hexosite/2024/05/14/Head/">O que são algoritmos de ordenação e busca binária?</a>
     </h1>
   
 
@@ -91,24 +91,620 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p><strong>Algoritmo</strong> <strong>de</strong> <strong>ordenação</strong>, em ciência da computação, é um algoritmo que coloca os elementos de uma dada sequência em uma certa ordem. Em outras palavras efetua sua ordenação completa ou parcial. O objetivo da ordenação é facilitar a recuperação dos dados de uma lista. Alguns algoritmos de ordenação mostrados neste blog serão:</p>
+<ul>
+  <li>Bubble Sort</li>
+  <li>Selection Sort</li>
+  <li>Quick sort</li>
+  <li>Merge Sort</li>
+  <li>Insertion Sort</li>
+</ul>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>Já a <strong>Busca</strong> <strong>Binária</strong> é um eficiente algoritmo para encontrar um item em uma lista ordenada de itens. Ela funciona dividindo repetidamente pela metade a porção da lista que deve conter o item, até reduzir as localizações possíveis a apenas uma.</p>
+<p><strong>Abaixo esta o algotitmo no qual você pode digitar os números e escolher qualquer ordenação, e usar o busca binária também</strong>.</p>
+<!-- raw -->
+<style>
+  body {
+            font-family: Arial, sans-serif;
+        
+        }
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+
+        .code-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+</style>
+
+<div class="code-box">
+ <h4>Algoritmos de Ordenação e Busca</h4>
+    <label for="numbers">Digite os números separados por vírgula:</label>
+    <input type="text" id="numbers" placeholder="ex.: 5, 2, 9, 1, 6">
+    <br><br>
+    <select id="sortAlgorithm">
+        <option value="bubbleSort">Bubble Sort</option>
+        <option value="selectionSort">Selection Sort</option>
+        <option value="insertionSort">Insertion Sort</option>
+        <option value="mergeSort">Merge Sort</option>
+    </select>
+    <button onclick="sort()">Ordenar</button>
+    <br><br>
+    <label for="search">Buscar:</label>
+    <input type="text" id="search" placeholder="Digite um número para buscar">
+    <button onclick="binarySearch()">Buscar</button>
+    <div id="output"></div>
+</div>
+
+   <script>
+ let numbersArray = [];
+
+        function sort() {
+            let numbersInput = document.getElementById("numbers").value;
+            let sortAlgorithm = document.getElementById("sortAlgorithm").value;
+            let sortedArray;
+
+            switch (sortAlgorithm) {
+                case 'bubbleSort':
+                    sortedArray = bubbleSort(numbersInput.split(',').map(Number));
+                    break;
+                case 'selectionSort':
+                    sortedArray = selectionSort(numbersInput.split(',').map(Number));
+                    break;
+                case 'insertionSort':
+                    sortedArray = insertionSort(numbersInput.split(',').map(Number));
+                    break;
+                case 'mergeSort':
+                    sortedArray = mergeSort(numbersInput.split(',').map(Number));
+                    break;
+                default:
+                    sortedArray = numbersInput.split(',').map(Number); // Default to input numbers if no algorithm selected
+            }
+
+            numbersArray = sortedArray; // Store the sorted array for binary search
+            document.getElementById("output").innerHTML = "Array Ordenado (" + sortAlgorithm + "): " + sortedArray;
+        }
+
+        // Bubble Sort
+        function bubbleSort(arr) {
+            let n = arr.length;
+
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+
+            return arr;
+        }
+
+        // Selection Sort
+        function selectionSort(arr) {
+            let n = arr.length;
+
+            for (let i = 0; i < n - 1; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                if (minIndex !== i) {
+                    let temp = arr[i];
+                    arr[i] = arr[minIndex];
+                    arr[minIndex] = temp;
+                }
+            }
+
+            return arr;
+        }
+
+        // Insertion Sort
+        function insertionSort(arr) {
+            let n = arr.length;
+
+            for (let i = 1; i < n; i++) {
+                let key = arr[i];
+                let j = i - 1;
+                while (j >= 0 && arr[j] > key) {
+                    arr[j + 1] = arr[j];
+                    j--;
+                }
+                arr[j + 1] = key;
+            }
+
+            return arr;
+        }
+
+        
+        // Merge Sort
+        function mergeSort(arr) {
+            function merge(arr, l, m, r) {
+                let n1 = m - l + 1;
+                let n2 = r - m;
+
+                let L = new Array(n1);
+                let R = new Array(n2);
+
+                for (let i = 0; i < n1; i++) {
+                    L[i] = arr[l + i];
+                }
+                for (let j = 0; j < n2; j++) {
+                    R[j] = arr[m + 1 + j];
+                }
+
+                let i = 0;
+                let j = 0;
+                let k = l;
+
+                while (i < n1 && j < n2) {
+                    if (L[i] <= R[j]) {
+                        arr[k] = L[i];
+                        i++;
+                    } else {
+                        arr[k] = R[j];
+                        j++;
+                    }
+                    k++;
+                }
+
+                while (i < n1) {
+                    arr[k] = L[i];
+                    i++;
+                    k++;
+                }
+
+                while (j < n2) {
+                    arr[k] = R[j];
+                    j++;
+                    k++;
+                }
+            }
+
+            function mergeSortUtil(arr, l, r) {
+                if (l >= r) return;
+
+                let m = Math.floor((l + r) / 2);
+                mergeSortUtil(arr, l, m);
+                mergeSortUtil(arr, m + 1, r);
+                merge(arr, l, m, r);
+            }
+
+            mergeSortUtil(arr, 0, arr.length - 1);
+
+            return arr;
+        }
+
+         // Binary Search
+        function binarySearch() {
+            let searchValue = parseInt(document.getElementById("search").value);
+            let low = 0;
+            let high = numbersArray.length - 1;
+
+            while (low <= high) {
+                let mid = Math.floor((low + high) / 2);
+                if (numbersArray[mid] === searchValue) {
+                    document.getElementById("output").innerHTML = "Elemento encontrado no índice: " + mid;
+                    return;
+                } else if (numbersArray[mid] < searchValue) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+
+            document.getElementById("output").innerHTML = "Elemento não encontrado";
+        }
+</script> 
+<!-- endraw -->
+
+<p>Para mais informação de como funciona os algoritmos de ordenação e busca binária, continue avançando o site</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/hello-world/" data-id="clw6rpwyh00008wumg1mi40mm" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Head/" data-id="clw6rzdc10000tcumdkyy0u8j" data-title="O que são algoritmos de ordenação e busca binária?" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Bubble" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Bubble/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:16:53.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/hexosite/2024/05/14/Bubble/">Bubble Sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>O Bubble Sort (Ordenação por Bolha) é um algoritmo de ordenação que funciona trocando repetidamente de posição, os elementos adjacentes em um arranjo que estão fora de ordem entre si. O algoritmo leva esse nome por “borbulhar” os maiores elementos para o final do arranjo.</p>
+<p>O Bubble Sort apresenta um desempenho ruim, quando comparado à outros algoritmos de ordenação. No entanto, por ser de simples compreensão, é frequentemente usado para motivar o estudo de outros algoritmos de ordenação.</p>
+<h5 id="Quais-sao-as-caracteristicas-do-Bubble-Sort"><a href="#Quais-sao-as-caracteristicas-do-Bubble-Sort" class="headerlink" title="Quais são as características do Bubble Sort?"></a>Quais são as características do Bubble Sort?</h5><ul>
+<li>O Bubble Sort é um algoritmo iterativo.</li>
+<li>O Bubble Sort é um algoritmo de ordenação por comparação.</li>
+<li>O Bubble Sort é um algoritmo de ordenação estável.</li>
+<li>O desempenho do algoritmo não é sensível aos dados de entrada.</li>
+</ul>
+
+<h5 id="Qual-e-o-algoritmo-do-Bubble-Sort"><a href="#Qual-e-o-algoritmo-do-Bubble-Sort" class="headerlink" title="Qual é o algoritmo do Bubble Sort?"></a>Qual é o algoritmo do Bubble Sort?</h5><ol>
+<li>Percorra a o arranjo de entrada, do início ao fim.</li>
+<li>Para cada elemento considerado, verifique se o elemento subsequente no arranjo é menor.</li>
+<li>Em caso afirmativo, troque os dois elementos de posição no arranjo.</li>
+<li>Ao terminar de percorrer o arranjo, verifique se algum elemento trocou de posição. Em caso afirmativo, volte ao Passo 1.</li>
+<li>O arranjo está ordenado.</li>
+</ol>
+
+<h5 id="Qual-e-o-desempenho-do-Bubble-Sort"><a href="#Qual-e-o-desempenho-do-Bubble-Sort" class="headerlink" title="Qual é o desempenho do Bubble Sort?"></a>Qual é o desempenho do Bubble Sort?</h5><p>O Bubble Sort não é um algoritmo de ordenação indicado para a ordenação de grandes conjuntos de dados.</p>
+<h5 id="Pior-Caso"><a href="#Pior-Caso" class="headerlink" title="Pior Caso"></a>Pior Caso</h5><p>O pior caso para o algoritmo Bubble Sort ocorre quando o arranjo de entrada está ordenado de forma inversa. Nessa situação, o algoritmo tem um custo quadrático de comparações e trocas, em função do número de elementos a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n²)</span> comparações</li>
+<li><span style="color:red">O(n²)</span> trocas</li>
+</ul>
+
+<h5 id="Melhor-Caso"><a href="#Melhor-Caso" class="headerlink" title="Melhor Caso"></a>Melhor Caso</h5><p>O melhor caso para o algoritmo Bubble Sort ocorre quando o arranjo de entrada já está ordenado. Nessa situação, o algoritmo tem um custo linear de comparações e um custo constante de trocas, em função do número de elementos a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n)</span> comparações</li>
+<li><span style="color:red">O(1)</span> trocas</li>
+</ul>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Bubble/" data-id="clw6rycfi0001bsum8e5y0y2l" data-title="Bubble Sort" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Selection" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Selection/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:16:31.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/hexosite/2024/05/14/Selection/">Selection Sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>um algoritmo de ordenação que funciona selecionando o menor elemento de um arranjo e colocando-o na primeira posição, depois selecionando o segundo menor elemento e colocando-o na segunda posição, e assim sucessivamente até que o arranjo esteja ordenado.</p>
+<h5 id="Quando-usar-o-Selection-Sort"><a href="#Quando-usar-o-Selection-Sort" class="headerlink" title="Quando usar o Selection Sort?"></a>Quando usar o Selection Sort?</h5><p>O Selection Sort se destaca em relação aos outros algoritmos de ordenação em dois pontos: (i) por realizar um número mínimo de trocas, e (ii) não necessitar de uma estrutura de dados auxiliar para funcionar.</p>
+<p>Por esses motivos, o Selection Sort é indicado para a ordenação de arranjos quando memória extra disponível para uso é escassa, ou então o custo para trocar-se elementos de posição no arranjo é elevado.</p>
+<h5 id="Quais-sao-as-caracteristicas-do-Selection-Sort"><a href="#Quais-sao-as-caracteristicas-do-Selection-Sort" class="headerlink" title="Quais são as características do Selection Sort?"></a>Quais são as características do Selection Sort?</h5><ul>
+<li>O Selection Sort é um algoritmo iterativo.</li>
+<li>O Selection Sort é um algoritmo de ordenação por comparação.</li>
+<li>O Selection Sort não é um algoritmo de ordenação estável.</li>
+<li>O desempenho do algoritmo Selection Sort não é sensível aos dados de entrada.</li>
+<li>O Selection Sort não necessita de uma estrutura de dados auxiliar para funcionar.</li>
+</ul>
+
+<h5 id="Qual-e-o-algoritmo-do-Selection-Sort"><a href="#Qual-e-o-algoritmo-do-Selection-Sort" class="headerlink" title="Qual é o algoritmo do Selection Sort?"></a>Qual é o algoritmo do Selection Sort?</h5><ol>
+<li>Particione o arranjo de elementos a ser ordenado em dois sub-arranjos: (i) um sub-arranjo <span style="color:red">A</span> inicialmente vazio que contém os elementos já ordenados, e (i) um sub-arranjo <span style="color:red">B</span> com inicialmente todos os elementos do arranjo original.</li>
+<li>Selecione o menor elemento da sub-arranjo <span style="color:red">B</span> e coloque-o na última posição do sub-arranjo <span style="color:red">A</span>.</li>
+<li>Se o sub-arranjo <span style="color:red">B</span> não estiver vazio, volte ao Passo 2.</li>
+<li>Retorne o sub-arranjo <span style="color:red">A</span>, que contém os elementos do arranjo original ordenados de forma ascendente.</li>
+</ol>
+
+<h5 id="Qual-e-o-desempenho-do-Selection-Sort"><a href="#Qual-e-o-desempenho-do-Selection-Sort" class="headerlink" title="Qual é o desempenho do Selection Sort?"></a>Qual é o desempenho do Selection Sort?</h5><h5 id="Pior-Caso"><a href="#Pior-Caso" class="headerlink" title="Pior Caso"></a>Pior Caso</h5><p>O pior caso para o algoritmo Selection Sort ocorre quando o arranjo de elementos já está ordenado de forma inversa. Nessa situação, o algoritmo tem um custo quadrático de comparações e um custo linear de trocas, em função do número de elementos a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n²)</span> comparações</li>
+<li><span style="color:red">O(n)</span> trocas</li>
+</ul>
+
+<h5 id="Melhor-Caso"><a href="#Melhor-Caso" class="headerlink" title="Melhor Caso"></a>Melhor Caso</h5><p>O melhor caso para o algoritmo Selection Sort ocorre quando o arranjo de elementos já está ordenado. Nessa situação, o algoritmo tem um custo quadrático de comparações e um custo constante de trocas, em função do número de elementos a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n²)</span> comparações</li>
+<li><span style="color:red">O(1)</span> trocas</li>
+</ul>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Selection/" data-id="clw6rycfb0000bsum8vfu5ue7" data-title="Selection Sort" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Quick" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Quick/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:15:15.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/hexosite/2024/05/14/Quick/">Quick Sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>O Quicksort é um algoritmo de ordenação por comparação geral criado por Tony Hoare em 1959. Ele é um algoritmo de Divisão e Conquista que funciona particionando e reordenando recursivamente um arranjo de acordo com um elemento pivô.</p>
+<p>O Quicksort apresenta um desempenho marginalmente superiora outros algoritmos de ordenação por comparação, como o Merge Sort e o Heap Sort.</p>
+<h5 id="Quais-sao-as-caracteristicas-do-Quicksort"><a href="#Quais-sao-as-caracteristicas-do-Quicksort" class="headerlink" title="Quais são as características do Quicksort?"></a>Quais são as características do Quicksort?</h5><ul>
+<li>O Quicksort é um algoritmo recursivo.</li>
+<li>O Quicksort é um algoritmo de ordenação por comparação.</li>
+<li>O Quicksort não é um algoritmo de ordenação estável.</li>
+<li>O desempenho do algoritmo Quicksort é muito sensível aos dados de entrada.</li>
+<li>O Quicksort não necessita de uma estrutura de dados auxiliar para funcionar.</li>
+</ul>
+
+<h5 id="Qual-e-o-algoritmo-do-Quicksort"><a href="#Qual-e-o-algoritmo-do-Quicksort" class="headerlink" title="Qual é o algoritmo do Quicksort?"></a>Qual é o algoritmo do Quicksort?</h5><ol>
+<li>Caso o arranjo tiver menos que dois elementos, pare a recursão.</li>
+<li>Selecione um elemento do arranjo e chame-o de elemento pivô.</li>
+<li>Particione e reordene o arranjo em dois sub-arranjos, de forma que os elementos que forem menor do que o pivô fique antes do ponto de divisão e os elementos maiores que o pivô fiquem depois do ponto de divisão. Elementos que forem iguais ao pivô podem ser colocados em quaisquer uma das partições.</li>
+<li>Recursivamente aplique os Passos 1 – 3 nos sub-arranjos da esquerda e direita.</li>
+<li>Quando a recursão parar, o arranjo está ordenado.</li>
+</ol>
+
+<p>Para lidar com chaves duplicadas, o passo 3 usa 3 sub-arranjos, de forma que os elementos que forem menores do que o pivô ficam no primeiro sub-arranjo, os elementos iguais ao pivô ficam no sub-arranjo do meio, e os elementos maiores que o pivô ficam no terceiro sub-arranjo.</p>
+<h5 id="Qual-e-o-desempenho-do-Quicksort"><a href="#Qual-e-o-desempenho-do-Quicksort" class="headerlink" title="Qual é o desempenho do Quicksort?"></a>Qual é o desempenho do Quicksort?</h5><h5 id="Pior-Caso"><a href="#Pior-Caso" class="headerlink" title="Pior Caso"></a>Pior Caso</h5><p>O pior caso do Quicksort ocorre quando o arranjo de entrada já está ordenado. Nesse caso, ao fim do particionamento do particionamento os sub-arranjos podem ter tamanhos diferentes (estarem desbalanceados), fazendo com que a ordenação recursiva de um sub-arranjo leve mais tempo que a do outro. Nessa situação, o algoritmo tem um custo quadrático de comparações, em função do número de elementos a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n²)</span> comparações</li>
+</ul>
+
+<h5 id="Melhor-Caso"><a href="#Melhor-Caso" class="headerlink" title="Melhor Caso"></a>Melhor Caso</h5><p>O melhor caso do Quicksort ocorre quando o arranjo de entrada está desordenado de forma randomizada. Nessa situação, o algoritmo tem um custo super-linear de comparações, em função do número de elementos a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n log₂ n)</span> comparações</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Quick/" data-id="clw6rwch60001jwum58bx5cxh" data-title="Quick Sort" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Merge" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Merge/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:14:44.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/hexosite/2024/05/14/Merge/">Merge Sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>O Merge Sort (Ordenação por Mesclagem) é um algoritmo de ordenação por comparação criado por John von Neumann em 1945. O algoritmo funciona dividindo a coleção de elementos em duas sub-coleções, ordenando de forma recursiva cada sub-coleção e, em seguida, combinando as duas subcoleções.</p>
+<h5 id="Quando-usar-o-Merge-Sort"><a href="#Quando-usar-o-Merge-Sort" class="headerlink" title="Quando usar o Merge Sort?"></a>Quando usar o Merge Sort?</h5><ul>
+<li>O Merge Sort pode ser usado para ordenar coleções grandes</li>
+<li>O Merge Sort pode ser usado quando uma ordenação estável é necessária.</li>
+</ul>
+
+<h5 id="Quais-sao-as-caracteristicas-do-Merge-Sort"><a href="#Quais-sao-as-caracteristicas-do-Merge-Sort" class="headerlink" title="Quais são as características do Merge Sort?"></a>Quais são as características do Merge Sort?</h5><ul>
+<li>O Merge Sort é um algoritmo de Divisão e Conquista.</li>
+<li>O Merge Sort é um algoritmo de ordenação por comparação.</li>
+<li>O Merge Sort é um algoritmo de ordenação estável.</li>
+<li>O Merge Sort pode ser usado para ordenar arranjos e listas. </li>
+<li>O desempenho do merge sort não depende da disposição dos dados na coleção de entrada. </li>
+</ul>
+
+<h5 id="Qual-e-o-algoritmo-do-Merge-Sort"><a href="#Qual-e-o-algoritmo-do-Merge-Sort" class="headerlink" title="Qual é o algoritmo do Merge Sort?"></a>Qual é o algoritmo do Merge Sort?</h5><ol>
+<li>Verifique se a coleção possui apenas um elemento. Em caso afirmativo, retorne.</li>
+<li>Divida a coleção em duas subcoleções.</li>
+<li>Ordene recursivamente cada subcoleção.</li>
+<li>Combine as duas subcoleções ordenadas em uma única.</li>
+<li>Retorne a coleção ordenada.</li>
+</ol>
+
+<h5 id="Qual-e-o-desempenho-do-Merge-Sort"><a href="#Qual-e-o-desempenho-do-Merge-Sort" class="headerlink" title="Qual é o desempenho do Merge Sort?"></a>Qual é o desempenho do Merge Sort?</h5><p>O desempenho do algoritmo Merge Sort não é impactado pela disposição dos dados no arranjo de entrada. Assim, o algoritmo apresenta tanto no pior caso quanto melhor caso um custo super-linear de comparações, em função do comprimento n do arranjo de entrada:</p>
+<ul>
+<li><span style="color:red">O(n log₂ n)</span> comparações</li>
+</ul>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Merge/" data-id="clw6rwch00000jwum9rlg40pb" data-title="Merge Sort" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Insertion" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Insertion/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:13:08.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/hexosite/2024/05/14/Insertion/">Insertion Sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>O Insertion Sort (Ordenação por Inserção) é um algoritmo de ordenação que funciona de forma similar ao modo como algumas pessoas ordenam cartas de um baralho, quando estão jogando. Ao adicionar uma nova carta a uma mão de cartas ordenadas, o jogador compara a nova carta com todas as demais cartas em sua mão, para determinar o ponto de inserção adequado.</p>
+<h5 id="Quais-sao-as-caracteristicas-do-Insertion-Sort"><a href="#Quais-sao-as-caracteristicas-do-Insertion-Sort" class="headerlink" title="Quais são as características do Insertion Sort?"></a>Quais são as características do Insertion Sort?</h5><ul>
+<li>O Insertion Sort é um algoritmo iterativo.</li>
+<li>O Insertion Sort é um algoritmo de ordenação por comparação.</li>
+<li>O Insertion Sort é um algoritmo de ordenação estável.</li>
+<li>O desempenho do algoritmo Insertion Sort é muito sensível aos dados de entrada.</li>
+<li>O Insertion Sort necessita de uma estrutura de dados auxiliar para funcionar.</li>
+</ul>
+
+<h5 id="Qual-e-o-algoritmo-de-Insertion-Sort"><a href="#Qual-e-o-algoritmo-de-Insertion-Sort" class="headerlink" title="Qual é o algoritmo de Insertion Sort?"></a>Qual é o algoritmo de Insertion Sort?</h5><ol>
+  <li>Particione o arranjo de entrada em dois:
+      <ul>
+      <li>Um sub-arranjo <span style="color:red">A</span> que inicialmente contém apenas o primeiro elemento do arranjo original./li>
+      <li>Um sub-arranjo <span style="color:red">B</span> que inicialmente contém todos os demais elementos.</li>
+    </ul>
+    </li>
+  <li>Considere o primeiro elemento do sub-arranjo <span style="color:red">B</span>. Denote este elemento <span style="color:red">x</span>.</li>
+  <li>Procure no sub-arranjo <span style="color:red">A</span> o ponto onde <span style="color:red">x</span> deve ser inserido, da direita para a esquerda.</li>
+  <li>Desloque uma posição para a direita, todos os elementos no sub-arranjo <span style="color:red">A</span> que estão à direita do ponto de inserção.</li>
+  <li>Insira o elemento <span style="color:red">x</span> na posição de inserção encontrada no sub-arranjo <span style="color:red">A</span>.</li>
+  <li>Se o sub-arranjo <span style="color:red">B</span> não estiver vazio, volte ao Passo 2.</li>
+  <li>Retorne o sub-arranjo <span style="color:red">A</span>, que contém os elementos da arranjo original ordenados.</li>
+</ol>
+
+<h5 id="Qual-e-o-desempenho-do-Insertion-Sort"><a href="#Qual-e-o-desempenho-do-Insertion-Sort" class="headerlink" title="Qual é o desempenho do Insertion Sort?"></a>Qual é o desempenho do Insertion Sort?</h5><h5 id="Pior-Caso"><a href="#Pior-Caso" class="headerlink" title="Pior Caso"></a>Pior Caso</h5><p>O pior caso para o algoritmo Insertion Sort ocorre quando a lista de elementos está ordenada de forma inversa. Nessa situação, o algoritmo te um custo quadrático de comparações e de trocas, em função do número de elementos n a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n²)</span> comparações</li>
+<li><span style="color:red">O(n²)</span> trocas</li>
+</ul>
+
+<h5 id="Melhor-Caso"><a href="#Melhor-Caso" class="headerlink" title="Melhor Caso"></a>Melhor Caso</h5><p>O melhor caso para o algoritmo Insertion Sort ocorre quando a lista de elementos já está ordenada. Nessa situação, o algoritmo tem um custo linear de comparações e um custo constante de trocas, em função do número de elementos n a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n)</span> comparações</li>
+<li><span style="color:red">O(1)</span> trocas</li>
+</ul>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Insertion/" data-id="clw6rtv8b0000t0um4oyz8l7f" data-title="Insertion Sort" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Binario" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Binario/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:12:24.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/hexosite/2024/05/14/Binario/">Busca Binaria</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>A <strong>Busca Binária</strong> funciona dividindo a lista de busca pela metade repetidamente, até encontrar o elemento que estamos buscando, ou determinar que ele não existe, reduzindo drasticamente o número de iterações que precisamos executar, mesmo no pior caso.</p>
+<p><strong>Passo a passo</strong>:<br>Vamos pegar como exemplo a lista anterior com os mesmos 15 elementos: [1,3,7,9,19,49,61,62,63,64,65,70,73,75,80]</p>
+<ol>
+<li><p>O primeiro passo para o algoritmo é definir seus limites iniciais e finais:<br>Inicial &#x3D; 0, pois é sempre o primeiro índice da lista<br>Final &#x3D; 14, pois é o tamanho do array — 1;</p>
+</li>
+<li><p>Após encontrar os limites da esquerda e direita, precisamos encontrar o meio da lista. Para fazer isso, podemos usar o seguinte cálculo:<br>Meio &#x3D; (Inicial + Final) &#x2F; 2.<br>É importante se atentar que essa divisão deve ser exata, então se tivermos, por exemplo, Meio &#x3D; (5 + 8) &#x2F; 2, teremos como resultado 6.</p>
+</li>
+<li><p>Comparar o número no meio da lista, verificar se ele é igual ao número procurado, maior ou menor, e alterar os limites para a nova regra. Basta repetir esses 3 passos até que o limite inicial fique maior que o limite final, pois aí significa que verificamos todos os elementos da lista.</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Binario/" data-id="clw6rtv8f0001t0umcw9ybe19" data-title="Busca Binaria" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -136,9 +732,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexosite/archives/2024/05/">May 2024</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexosite/archives=/2024/05/">maio 2024</a></li></ul>
     </div>
   </div>
 
@@ -146,12 +742,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/hexosite/2024/05/14/hello-world/">Hello World</a>
+            <a href="/hexosite/2024/05/14/Head/">O que são algoritmos de ordenação e busca binária?</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Bubble/">Bubble Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Selection/">Selection Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Quick/">Quick Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Merge/">Merge Sort</a>
           </li>
         
       </ul>
@@ -167,7 +779,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2024 John Doe<br>
+      &copy; 2024 Gabriel Furlan Costa<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Merge Sort | Ordenação e Busca Binária</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="O Merge Sort (Ordenação por Mesclagem) é um algoritmo de ordenação por comparação criado por John von Neumann em 1945. O algoritmo funciona dividindo a coleção de elementos em duas sub-coleções, orden">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Merge Sort">
+<meta property="og:url" content="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Merge/index.html">
+<meta property="og:site_name" content="Ordenação e Busca Binária">
+<meta property="og:description" content="O Merge Sort (Ordenação por Mesclagem) é um algoritmo de ordenação por comparação criado por John von Neumann em 1945. O algoritmo funciona dividindo a coleção de elementos em duas sub-coleções, orden">
+<meta property="og:locale" content="pt_BR">
+<meta property="article:published_time" content="2024-05-14T19:14:44.000Z">
+<meta property="article:modified_time" content="2024-05-14T19:15:02.492Z">
+<meta property="article:author" content="Gabriel Furlan Costa">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/hexosite/atom.xml" title="Ordenação e Busca Binária" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/hexosite/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/hexosite/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/hexosite/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexosite/" id="logo">Ordenação e Busca Binária</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/hexosite/">Home</a>
+        
+          <a class="main-nav-link" href="/hexosite/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/hexosite/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gabrielfurlanx.github.io/hexosite"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Merge" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Merge/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:14:44.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Merge Sort
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>O Merge Sort (Ordenação por Mesclagem) é um algoritmo de ordenação por comparação criado por John von Neumann em 1945. O algoritmo funciona dividindo a coleção de elementos em duas sub-coleções, ordenando de forma recursiva cada sub-coleção e, em seguida, combinando as duas subcoleções.</p>
+<h5 id="Quando-usar-o-Merge-Sort"><a href="#Quando-usar-o-Merge-Sort" class="headerlink" title="Quando usar o Merge Sort?"></a>Quando usar o Merge Sort?</h5><ul>
+<li>O Merge Sort pode ser usado para ordenar coleções grandes</li>
+<li>O Merge Sort pode ser usado quando uma ordenação estável é necessária.</li>
+</ul>
+
+<h5 id="Quais-sao-as-caracteristicas-do-Merge-Sort"><a href="#Quais-sao-as-caracteristicas-do-Merge-Sort" class="headerlink" title="Quais são as características do Merge Sort?"></a>Quais são as características do Merge Sort?</h5><ul>
+<li>O Merge Sort é um algoritmo de Divisão e Conquista.</li>
+<li>O Merge Sort é um algoritmo de ordenação por comparação.</li>
+<li>O Merge Sort é um algoritmo de ordenação estável.</li>
+<li>O Merge Sort pode ser usado para ordenar arranjos e listas. </li>
+<li>O desempenho do merge sort não depende da disposição dos dados na coleção de entrada. </li>
+</ul>
+
+<h5 id="Qual-e-o-algoritmo-do-Merge-Sort"><a href="#Qual-e-o-algoritmo-do-Merge-Sort" class="headerlink" title="Qual é o algoritmo do Merge Sort?"></a>Qual é o algoritmo do Merge Sort?</h5><ol>
+<li>Verifique se a coleção possui apenas um elemento. Em caso afirmativo, retorne.</li>
+<li>Divida a coleção em duas subcoleções.</li>
+<li>Ordene recursivamente cada subcoleção.</li>
+<li>Combine as duas subcoleções ordenadas em uma única.</li>
+<li>Retorne a coleção ordenada.</li>
+</ol>
+
+<h5 id="Qual-e-o-desempenho-do-Merge-Sort"><a href="#Qual-e-o-desempenho-do-Merge-Sort" class="headerlink" title="Qual é o desempenho do Merge Sort?"></a>Qual é o desempenho do Merge Sort?</h5><p>O desempenho do algoritmo Merge Sort não é impactado pela disposição dos dados no arranjo de entrada. Assim, o algoritmo apresenta tanto no pior caso quanto melhor caso um custo super-linear de comparações, em função do comprimento n do arranjo de entrada:</p>
+<ul>
+<li><span style="color:red">O(n log₂ n)</span> comparações</li>
+</ul>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Merge/" data-id="clw6rwch00000jwum9rlg40pb" data-title="Merge Sort" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hexosite/2024/05/14/Quick/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Quick Sort
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexosite/2024/05/14/Insertion/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Insertion Sort</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexosite/archives=/2024/05/">maio 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Head/">O que são algoritmos de ordenação e busca binária?</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Bubble/">Bubble Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Selection/">Selection Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Quick/">Quick Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Merge/">Merge Sort</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Gabriel Furlan Costa<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexosite/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexosite/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/hexosite/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/hexosite/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/hexosite/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

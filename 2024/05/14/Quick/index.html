@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Quick Sort | Ordenação e Busca Binária</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="O Quicksort é um algoritmo de ordenação por comparação geral criado por Tony Hoare em 1959. Ele é um algoritmo de Divisão e Conquista que funciona particionando e reordenando recursivamente um arranjo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quick Sort">
+<meta property="og:url" content="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Quick/index.html">
+<meta property="og:site_name" content="Ordenação e Busca Binária">
+<meta property="og:description" content="O Quicksort é um algoritmo de ordenação por comparação geral criado por Tony Hoare em 1959. Ele é um algoritmo de Divisão e Conquista que funciona particionando e reordenando recursivamente um arranjo">
+<meta property="og:locale" content="pt_BR">
+<meta property="article:published_time" content="2024-05-14T19:15:15.000Z">
+<meta property="article:modified_time" content="2024-05-14T19:15:30.554Z">
+<meta property="article:author" content="Gabriel Furlan Costa">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/hexosite/atom.xml" title="Ordenação e Busca Binária" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/hexosite/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/hexosite/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/hexosite/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexosite/" id="logo">Ordenação e Busca Binária</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/hexosite/">Home</a>
+        
+          <a class="main-nav-link" href="/hexosite/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/hexosite/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gabrielfurlanx.github.io/hexosite"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Quick" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Quick/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:15:15.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Quick Sort
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>O Quicksort é um algoritmo de ordenação por comparação geral criado por Tony Hoare em 1959. Ele é um algoritmo de Divisão e Conquista que funciona particionando e reordenando recursivamente um arranjo de acordo com um elemento pivô.</p>
+<p>O Quicksort apresenta um desempenho marginalmente superiora outros algoritmos de ordenação por comparação, como o Merge Sort e o Heap Sort.</p>
+<h5 id="Quais-sao-as-caracteristicas-do-Quicksort"><a href="#Quais-sao-as-caracteristicas-do-Quicksort" class="headerlink" title="Quais são as características do Quicksort?"></a>Quais são as características do Quicksort?</h5><ul>
+<li>O Quicksort é um algoritmo recursivo.</li>
+<li>O Quicksort é um algoritmo de ordenação por comparação.</li>
+<li>O Quicksort não é um algoritmo de ordenação estável.</li>
+<li>O desempenho do algoritmo Quicksort é muito sensível aos dados de entrada.</li>
+<li>O Quicksort não necessita de uma estrutura de dados auxiliar para funcionar.</li>
+</ul>
+
+<h5 id="Qual-e-o-algoritmo-do-Quicksort"><a href="#Qual-e-o-algoritmo-do-Quicksort" class="headerlink" title="Qual é o algoritmo do Quicksort?"></a>Qual é o algoritmo do Quicksort?</h5><ol>
+<li>Caso o arranjo tiver menos que dois elementos, pare a recursão.</li>
+<li>Selecione um elemento do arranjo e chame-o de elemento pivô.</li>
+<li>Particione e reordene o arranjo em dois sub-arranjos, de forma que os elementos que forem menor do que o pivô fique antes do ponto de divisão e os elementos maiores que o pivô fiquem depois do ponto de divisão. Elementos que forem iguais ao pivô podem ser colocados em quaisquer uma das partições.</li>
+<li>Recursivamente aplique os Passos 1 – 3 nos sub-arranjos da esquerda e direita.</li>
+<li>Quando a recursão parar, o arranjo está ordenado.</li>
+</ol>
+
+<p>Para lidar com chaves duplicadas, o passo 3 usa 3 sub-arranjos, de forma que os elementos que forem menores do que o pivô ficam no primeiro sub-arranjo, os elementos iguais ao pivô ficam no sub-arranjo do meio, e os elementos maiores que o pivô ficam no terceiro sub-arranjo.</p>
+<h5 id="Qual-e-o-desempenho-do-Quicksort"><a href="#Qual-e-o-desempenho-do-Quicksort" class="headerlink" title="Qual é o desempenho do Quicksort?"></a>Qual é o desempenho do Quicksort?</h5><h5 id="Pior-Caso"><a href="#Pior-Caso" class="headerlink" title="Pior Caso"></a>Pior Caso</h5><p>O pior caso do Quicksort ocorre quando o arranjo de entrada já está ordenado. Nesse caso, ao fim do particionamento do particionamento os sub-arranjos podem ter tamanhos diferentes (estarem desbalanceados), fazendo com que a ordenação recursiva de um sub-arranjo leve mais tempo que a do outro. Nessa situação, o algoritmo tem um custo quadrático de comparações, em função do número de elementos a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n²)</span> comparações</li>
+</ul>
+
+<h5 id="Melhor-Caso"><a href="#Melhor-Caso" class="headerlink" title="Melhor Caso"></a>Melhor Caso</h5><p>O melhor caso do Quicksort ocorre quando o arranjo de entrada está desordenado de forma randomizada. Nessa situação, o algoritmo tem um custo super-linear de comparações, em função do número de elementos a serem ordenados:</p>
+<ul>
+<li><span style="color:red">O(n log₂ n)</span> comparações</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Quick/" data-id="clw6rwch60001jwum58bx5cxh" data-title="Quick Sort" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hexosite/2024/05/14/Selection/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Selection Sort
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexosite/2024/05/14/Merge/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Merge Sort</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexosite/archives=/2024/05/">maio 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Head/">O que são algoritmos de ordenação e busca binária?</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Bubble/">Bubble Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Selection/">Selection Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Quick/">Quick Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Merge/">Merge Sort</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Gabriel Furlan Costa<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexosite/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexosite/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/hexosite/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/hexosite/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/hexosite/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

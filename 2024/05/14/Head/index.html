@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>O que são algoritmos de ordenação e busca binária? | Ordenação e Busca Binária</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Algoritmo de ordenação, em ciência da computação, é um algoritmo que coloca os elementos de uma dada sequência em uma certa ordem. Em outras palavras efetua sua ordenação completa ou parcial. O objeti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="O que são algoritmos de ordenação e busca binária?">
+<meta property="og:url" content="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Head/index.html">
+<meta property="og:site_name" content="Ordenação e Busca Binária">
+<meta property="og:description" content="Algoritmo de ordenação, em ciência da computação, é um algoritmo que coloca os elementos de uma dada sequência em uma certa ordem. Em outras palavras efetua sua ordenação completa ou parcial. O objeti">
+<meta property="og:locale" content="pt_BR">
+<meta property="article:published_time" content="2024-05-14T19:17:37.000Z">
+<meta property="article:modified_time" content="2024-05-14T19:19:26.568Z">
+<meta property="article:author" content="Gabriel Furlan Costa">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/hexosite/atom.xml" title="Ordenação e Busca Binária" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/hexosite/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/hexosite/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/hexosite/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexosite/" id="logo">Ordenação e Busca Binária</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/hexosite/">Home</a>
+        
+          <a class="main-nav-link" href="/hexosite/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/hexosite/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gabrielfurlanx.github.io/hexosite"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Head" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexosite/2024/05/14/Head/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T19:17:37.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      O que são algoritmos de ordenação e busca binária?
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>Algoritmo</strong> <strong>de</strong> <strong>ordenação</strong>, em ciência da computação, é um algoritmo que coloca os elementos de uma dada sequência em uma certa ordem. Em outras palavras efetua sua ordenação completa ou parcial. O objetivo da ordenação é facilitar a recuperação dos dados de uma lista. Alguns algoritmos de ordenação mostrados neste blog serão:</p>
+<ul>
+  <li>Bubble Sort</li>
+  <li>Selection Sort</li>
+  <li>Quick sort</li>
+  <li>Merge Sort</li>
+  <li>Insertion Sort</li>
+</ul>
+
+
+
+<p>Já a <strong>Busca</strong> <strong>Binária</strong> é um eficiente algoritmo para encontrar um item em uma lista ordenada de itens. Ela funciona dividindo repetidamente pela metade a porção da lista que deve conter o item, até reduzir as localizações possíveis a apenas uma.</p>
+<p><strong>Abaixo esta o algotitmo no qual você pode digitar os números e escolher qualquer ordenação, e usar o busca binária também</strong>.</p>
+<!-- raw -->
+<style>
+  body {
+            font-family: Arial, sans-serif;
+        
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+
+        .code-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+</style>
+
+<div class="code-box">
+ <h4>Algoritmos de Ordenação e Busca</h4>
+    <label for="numbers">Digite os números separados por vírgula:</label>
+    <input type="text" id="numbers" placeholder="ex.: 5, 2, 9, 1, 6">
+    <br><br>
+    <select id="sortAlgorithm">
+        <option value="bubbleSort">Bubble Sort</option>
+        <option value="selectionSort">Selection Sort</option>
+        <option value="insertionSort">Insertion Sort</option>
+        <option value="mergeSort">Merge Sort</option>
+    </select>
+    <button onclick="sort()">Ordenar</button>
+    <br><br>
+    <label for="search">Buscar:</label>
+    <input type="text" id="search" placeholder="Digite um número para buscar">
+    <button onclick="binarySearch()">Buscar</button>
+    <div id="output"></div>
+</div>
+
+   <script>
+ let numbersArray = [];
+
+        function sort() {
+            let numbersInput = document.getElementById("numbers").value;
+            let sortAlgorithm = document.getElementById("sortAlgorithm").value;
+            let sortedArray;
+
+            switch (sortAlgorithm) {
+                case 'bubbleSort':
+                    sortedArray = bubbleSort(numbersInput.split(',').map(Number));
+                    break;
+                case 'selectionSort':
+                    sortedArray = selectionSort(numbersInput.split(',').map(Number));
+                    break;
+                case 'insertionSort':
+                    sortedArray = insertionSort(numbersInput.split(',').map(Number));
+                    break;
+                case 'mergeSort':
+                    sortedArray = mergeSort(numbersInput.split(',').map(Number));
+                    break;
+                default:
+                    sortedArray = numbersInput.split(',').map(Number); // Default to input numbers if no algorithm selected
+            }
+
+            numbersArray = sortedArray; // Store the sorted array for binary search
+            document.getElementById("output").innerHTML = "Array Ordenado (" + sortAlgorithm + "): " + sortedArray;
+        }
+
+        // Bubble Sort
+        function bubbleSort(arr) {
+            let n = arr.length;
+
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+
+            return arr;
+        }
+
+        // Selection Sort
+        function selectionSort(arr) {
+            let n = arr.length;
+
+            for (let i = 0; i < n - 1; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                if (minIndex !== i) {
+                    let temp = arr[i];
+                    arr[i] = arr[minIndex];
+                    arr[minIndex] = temp;
+                }
+            }
+
+            return arr;
+        }
+
+        // Insertion Sort
+        function insertionSort(arr) {
+            let n = arr.length;
+
+            for (let i = 1; i < n; i++) {
+                let key = arr[i];
+                let j = i - 1;
+                while (j >= 0 && arr[j] > key) {
+                    arr[j + 1] = arr[j];
+                    j--;
+                }
+                arr[j + 1] = key;
+            }
+
+            return arr;
+        }
+
+        
+        // Merge Sort
+        function mergeSort(arr) {
+            function merge(arr, l, m, r) {
+                let n1 = m - l + 1;
+                let n2 = r - m;
+
+                let L = new Array(n1);
+                let R = new Array(n2);
+
+                for (let i = 0; i < n1; i++) {
+                    L[i] = arr[l + i];
+                }
+                for (let j = 0; j < n2; j++) {
+                    R[j] = arr[m + 1 + j];
+                }
+
+                let i = 0;
+                let j = 0;
+                let k = l;
+
+                while (i < n1 && j < n2) {
+                    if (L[i] <= R[j]) {
+                        arr[k] = L[i];
+                        i++;
+                    } else {
+                        arr[k] = R[j];
+                        j++;
+                    }
+                    k++;
+                }
+
+                while (i < n1) {
+                    arr[k] = L[i];
+                    i++;
+                    k++;
+                }
+
+                while (j < n2) {
+                    arr[k] = R[j];
+                    j++;
+                    k++;
+                }
+            }
+
+            function mergeSortUtil(arr, l, r) {
+                if (l >= r) return;
+
+                let m = Math.floor((l + r) / 2);
+                mergeSortUtil(arr, l, m);
+                mergeSortUtil(arr, m + 1, r);
+                merge(arr, l, m, r);
+            }
+
+            mergeSortUtil(arr, 0, arr.length - 1);
+
+            return arr;
+        }
+
+         // Binary Search
+        function binarySearch() {
+            let searchValue = parseInt(document.getElementById("search").value);
+            let low = 0;
+            let high = numbersArray.length - 1;
+
+            while (low <= high) {
+                let mid = Math.floor((low + high) / 2);
+                if (numbersArray[mid] === searchValue) {
+                    document.getElementById("output").innerHTML = "Elemento encontrado no índice: " + mid;
+                    return;
+                } else if (numbersArray[mid] < searchValue) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+
+            document.getElementById("output").innerHTML = "Elemento não encontrado";
+        }
+</script> 
+<!-- endraw -->
+
+<p>Para mais informação de como funciona os algoritmos de ordenação e busca binária, continue avançando o site</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gabrielfurlanx.github.io/hexosite/2024/05/14/Head/" data-id="clw6rzdc10000tcumdkyy0u8j" data-title="O que são algoritmos de ordenação e busca binária?" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/hexosite/2024/05/14/Bubble/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Bubble Sort</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexosite/archives=/2024/05/">maio 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Head/">O que são algoritmos de ordenação e busca binária?</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Bubble/">Bubble Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Selection/">Selection Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Quick/">Quick Sort</a>
+          </li>
+        
+          <li>
+            <a href="/hexosite/2024/05/14/Merge/">Merge Sort</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Gabriel Furlan Costa<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexosite/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexosite/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/hexosite/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/hexosite/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/hexosite/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
