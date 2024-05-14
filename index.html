@@ -143,6 +143,7 @@
         <option value="selectionSort">Selection Sort</option>
         <option value="insertionSort">Insertion Sort</option>
         <option value="mergeSort">Merge Sort</option>
+        <option value="quickSort">Quick Sort</option>
     </select>
     <button onclick="sort()">Ordenar</button>
     <br><br>
@@ -172,6 +173,9 @@
                     break;
                 case 'mergeSort':
                     sortedArray = mergeSort(numbersInput.split(',').map(Number));
+                    break;
+                case 'quickSort':
+                    sortedArray = quickSort(numbersInput.split(',').map(Number));
                     break;
                 default:
                     sortedArray = numbersInput.split(',').map(Number); // Default to input numbers if no algorithm selected
@@ -293,6 +297,25 @@
             mergeSortUtil(arr, 0, arr.length - 1);
 
             return arr;
+        }
+
+        // Quick Sort
+         function quickSort(arr) {
+            if (arr.length <= 1) return arr;
+
+            let pivot = arr[0];
+            let left = [];
+            let right = [];
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < pivot) {
+                    left.push(arr[i]);
+                } else {
+                    right.push(arr[i]);
+                }
+            }
+
+            return quickSort(left).concat(pivot, quickSort(right));
         }
 
          // Binary Search
